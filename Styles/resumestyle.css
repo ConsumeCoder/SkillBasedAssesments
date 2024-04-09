@@ -1,0 +1,13 @@
+h1 {
+  font-family: fantasy;
+}
+
+body {
+  background-color: rgb(47, 192, 192);
+}
+
+.recentimgs {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
