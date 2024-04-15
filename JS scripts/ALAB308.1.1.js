@@ -44,8 +44,8 @@ console.log(num2 >= num3);
 //Now for Part 1 Math Problems
 
 // The initial numbers that must be verified.
-const n1 = 10;
-const n2 = 15;
+const n1 = 15;
+const n2 = 10;
 const n3 = 20;
 const n4 = 5;
 
@@ -95,3 +95,11 @@ const dontDoThis =
   n2 != n3 &&
   n2 != n4 &&
   n3 != n4;
+
+const divisibleByFive =
+  n1 % 5 == 0 && n2 % 5 == 0 && n3 % 5 == 0 && n4 % 5 == 0;
+
+const firstLarger = n1 < n4;
+
+let chainOutPut = ((n1 - n2) * n3) % n4;
+console.log(chainOutPut);
