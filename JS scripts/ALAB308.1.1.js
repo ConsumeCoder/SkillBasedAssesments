@@ -4,7 +4,9 @@ const what = "This is my first JS lab";
 
 let why = "I'm doing it to practice coding in JS";
 
-const and = " " + "&,";
+const and = " " + "&" + " ";
+
+const simpleSpace = " ";
 
 let explain = `${what} ${and} ${why}`;
 console.log(greet + explain);
@@ -79,7 +81,7 @@ const isUnique =
 const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 
 // Finally, log the results.
-console.log(isValid);
+console.log("Are they valid numbers ?" + simpleSpace + isValid);
 
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
@@ -98,8 +100,24 @@ const dontDoThis =
 
 const divisibleByFive =
   n1 % 5 == 0 && n2 % 5 == 0 && n3 % 5 == 0 && n4 % 5 == 0;
+console.log(divisibleByFive + and + "these numbers are divisible By Five");
 
-const firstLarger = n1 < n4;
+const firstLarger = n1 > n4;
+console.log("is the first number larger than the last ? answer:" + firstLarger);
 
 let chainOutPut = ((n1 - n2) * n3) % n4;
-console.log(chainOutPut);
+console.log(chainOutPut + simpleSpace + "is achieved by this chain ");
+
+let notAbove25 = Number <= 24;
+
+// Part 2 Pratical Math
+
+const totalDistance = 1500
+const fuelbudget = 175
+
+let fuelCost = 3 
+let mph55 = 
+let mph60 =
+let mph75 =
+
+let neededGas = totalDistance % fuelCost
