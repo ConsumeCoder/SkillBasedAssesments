@@ -112,12 +112,22 @@ let notAbove25 = Number <= 24;
 
 // Part 2 Pratical Math
 
-const totalDistance = 1500
-const fuelbudget = 175
+const totalDistance = 1500;
+const fuelBudget = 175;
 
-let fuelCost = 3 
-let mph55 = 
-let mph60 =
-let mph75 =
+const fuelPrice = 3;
+let mph55 = 30;
+let mph60 = 28;
+let mph75 = 23;
 
-let neededGas = totalDistance % fuelCost
+let neededGas55 = totalDistance / mph55;
+let neededGas60 = totalDistance / mph60;
+let neededGas75 = totalDistance / mph75;
+
+const costFuel55 = neededGas55 * fuelPrice;
+const costFuel60 = neededGas60 * fuelPrice;
+const costFuel75 = neededGas75 * fuelPrice;
+
+const hoursUntil55 = totalDistance / 55;
+const hoursUntil60 = totalDistance / 60;
+const hoursUntil75 = totalDistance / 75;
