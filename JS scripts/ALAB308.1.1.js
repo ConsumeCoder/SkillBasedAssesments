@@ -147,3 +147,31 @@ console.log(
     "Covered by budget? Answer:" +
     costFuel55
 );
+
+console.log(
+  "At 60mph, this trip will take, " +
+    neededGas60 +
+    simpleSpace +
+    "gallons and" +
+    simpleSpace +
+    hoursUntil60 +
+    simpleSpace +
+    "hours" +
+    ind +
+    "Covered by budget? Answer:" +
+    costFuel60
+);
+
+console.log(
+  "At 75mph, this trip will take, " +
+    neededGas75 +
+    simpleSpace +
+    "gallons and" +
+    simpleSpace +
+    hoursUntil75 +
+    simpleSpace +
+    "hours" +
+    ind +
+    "Covered by budget? Answer:" +
+    costFuel75
+);
