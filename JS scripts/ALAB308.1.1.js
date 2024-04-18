@@ -8,6 +8,8 @@ const and = " " + "&" + " ";
 
 const simpleSpace = " ";
 
+const ind = ".\n";
+
 let explain = `${what} ${and} ${why}`;
 console.log(greet + explain);
 
@@ -131,3 +133,17 @@ const costFuel75 = neededGas75 * fuelPrice;
 const hoursUntil55 = totalDistance / 55;
 const hoursUntil60 = totalDistance / 60;
 const hoursUntil75 = totalDistance / 75;
+
+console.log(
+  "At 55mph, this trip will take, " +
+    neededGas55 +
+    simpleSpace +
+    "gallons and" +
+    simpleSpace +
+    hoursUntil55 +
+    simpleSpace +
+    "hours" +
+    ind +
+    "Covered by budget? Answer:" +
+    costFuel55
+);
