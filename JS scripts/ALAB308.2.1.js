@@ -35,11 +35,13 @@ This condition should be met if the plant count after the given number of weeks 
 
 Within your submission, include the results for 1, 2, and 3 weeks of growth as inputs.*/
 
-const PI = Math.PI;
-const radius = 5
-const eachPlant = .8
+const PI = 3.1415;
+const radius = 5;
+const eachPlant = 0.8;
 const maxArea = PI * radius * radius;
-const w1 = 1++
 
-let startingPlants = eachPlant * 20
-let currentArea = maxArea / startingPlants
+let startingPlants = 20;
+let currentArea = maxArea / startingPlants;
+let currentPlants = startingPlants * Math.pow(2, weeks);
+
+console.log(currentPlants);
