@@ -41,7 +41,8 @@ const eachPlant = 0.8;
 const maxArea = PI * radius * radius;
 
 let startingPlants = 20;
-let currentArea = maxArea / startingPlants;
-let currentPlants = startingPlants * Math.pow(2, weeks);
-
-console.log(currentPlants);
+let capacity = maxArea / eachPlant;
+let week1Plants = startingPlants * 2;
+let week2Plants = week1Plants * 2;
+let week3Plants = week2Plants * 2;
+let plantArea = console.log(`The garden area is ${capacity}`);
