@@ -38,14 +38,14 @@ Within your submission, include the results for 1, 2, and 3 weeks of growth as i
 const PI = 3.1415;
 const radius = 5;
 const eachPlant = 0.8;
-const maxArea = PI * radius * radius;
+const maxArea = Math.round(PI * radius * radius);
 
 let startingPlants = 20;
 let capacity = Math.round(maxArea / eachPlant);
 let week1Plants = startingPlants * 2;
 let week2Plants = week1Plants * 2;
 let week3Plants = week2Plants * 2;
-let plantArea0 = startingPlants * eachPlant;
+let plantArea0 = Math.round(startingPlants * eachPlant);
 let plantArea1 = week1Plants * eachPlant;
 console.log(
   `The max garden area is ${capacity} and the max area is ${maxArea}`
