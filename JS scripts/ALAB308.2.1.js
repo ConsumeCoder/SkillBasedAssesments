@@ -53,9 +53,13 @@ console.log(
 
 console.log(`The first planting covers ${plantArea0}`);
 
-if (plantArea0) {
+if (plantArea0 <= ) {
   console.log(
     `There's room for planting because we can fit ${capacity} plants`
   );
+} else { continue
+} if (condition) {
+    
 } else {
+    
 }
