@@ -7,6 +7,10 @@ let colHeaders = rows[0].split(",");
 
 console.log(colHeaders);
 
+console.log(rows);
+
+rows.shift(0);
+
 /*}
 
   for (let i = 0; i < csvStr.length; i++) {
