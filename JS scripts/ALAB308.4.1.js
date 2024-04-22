@@ -11,6 +11,16 @@ console.log(rows);
 
 rows.shift(0);
 
+let rowsData = [];
+
+rows.forEach(rows => {;
+let columns = rows.split(",");
+let dataRow = {};
+
+
+
+columns.forEach((columns, index) => { rowsData[colHeaders[index]] = columns.trim()});
+
 /*}
 
   for (let i = 0; i < csvStr.length; i++) {
