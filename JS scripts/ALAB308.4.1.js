@@ -9,17 +9,16 @@ console.log(colHeaders);
 
 console.log(rows);
 
-rows.shift(0);
+let rowsData = [rows.shift(0)];
 
-let rowsData = [];
+rows.forEach((rows) => {
+  let columns = rows.split(",");
+  let dataRow = {};
+});
 
-rows.forEach(rows => {;
-let columns = rows.split(",");
-let dataRow = {};
-
-
-
-columns.forEach((columns, index) => { rowsData[colHeaders[index]] = columns.trim()});
+columns.forEach((columns, index) => {
+  rowsData[colHeaders[index]] = columns.trim();
+});
 
 /*}
 
