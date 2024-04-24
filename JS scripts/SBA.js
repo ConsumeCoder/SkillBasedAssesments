@@ -108,7 +108,44 @@ let createLearner = {
             score
     }
 };
+function getLearnerData() {
+    // Define course and assignment details directly within the function for clarity
+    const CourseInfo = {
+        id: 451,
+        name: "Introduction to JavaScript"
+    };
+    const AssignmentGroup = {
+        id: 12345,
+        name: "Fundamentals of JavaScript",
+        course_id: 451,
+        group_weight: 25,
+        assignments: [
+            { id: 1, name: "Declare a Variable", due_at: "2023-01-25", points_possible: 50 },
+            { id: 2, name: "Write a Function", due_at: "2023-02-27", points_possible: 150 },
+            { id: 3, name: "Code the World", due_at: "3156-11-15", points_possible: 500 }
+        ]
+    };
+    const LearnerSubmissions = [
+        { learner_id: 125, assignment_id: 1, submission: { submitted_at: "2023-01-25", score: 47 } },
+        { learner_id: 125, assignment_id: 2, submission: { submitted_at: "2023-02-12", score: 150 } },
+        { learner_id: 125, assignment_id: 3, submission: { submitted_at: "2023-01-25", score: 400 } },
+        { learner_id: 132, assignment_id: 1, submission: { submitted_at: "2023-01-24", score: 39 } },
+        { learner_id: 132, assignment_id: 2, submission: { submitted_at: "2023-03-07", score: 140 } }
+    ];
 
+    // Data container for results
+    let learnersData = [];
+
+    // Check if course IDs match to prevent processing errors
+    if (CourseInfo.id !== AssignmentGroup.course_id) {
+        console.error("Error: Course ID does not match with the assignment group.");
+        return []; // Return empty array if there is a mismatch
+    }
+
+    // Process each submission individually
+    for (let i = 0; i < LearnerSubmissions.length; i++) {
+        const submission = LearnerSubmissions[i];
+        const assignment = AssignmentGroup.assignments.find(a => a.id === submission.assignment_id);
 // Skip processing if no matching assignment is found
         if (!assignment) {
             console.log(`No assignment found for ID: ${submission.assignment_id}`);
