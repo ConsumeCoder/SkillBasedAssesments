@@ -99,3 +99,51 @@ function getLearnerData(course, ag, submissions) {
 const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 
 console.log(result);
+
+let createLearner = {
+    learner_id:
+        assignment_id
+    submission {
+        submitted_at:
+            score
+    }
+};
+
+// Skip processing if no matching assignment is found
+        if (!assignment) {
+            console.log(`No assignment found for ID: ${submission.assignment_id}`);
+            continue;
+        }
+
+        // Check if the assignment is due
+        if (new Date(assignment.due_at) > new Date()) {
+            console.log(`Assignment ${assignment.id} not due yet`);
+            continue;
+        }
+
+        // Find or create a learner record
+        let learner = learnersData.find(l => l.id === submission.learner_id);
+        if (!learner) {
+            learner = { id: submission.learner_id, scores: {}, totalPoints: 0, totalPossible: 0 };
+            learnersData.push(learner);
+        }
+
+        // Calculate score with potential late penalty
+        const isLate = new Date(submission.submitted_at) > new Date(assignment.due_at);
+        const score = isLate ? submission.score * 0.9 : submission.score;
+        learner.scores[assignment.id] = score / assignment.points_possible;
+        learner.totalPoints += score;
+        learner.totalPossible += assignment.points_possible;
+    }
+
+    // Prepare final results
+    return learnersData.map(learner => ({
+        id: learner.id,
+        avg: learner.totalPoints / learner.totalPossible,
+        scores: learner.scores
+    }));
+}
+
+// Execute the function and log the results
+const result = getLearnerData();
+console.log("Processed data:", result);
