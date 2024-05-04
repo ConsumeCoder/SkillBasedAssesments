@@ -1,0 +1,24 @@
+flex-direction: column;
+    align-items: center;
+}
+.start{
+    display: block;
+    width: 90%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.userQuestion{
+    font-size: xx-large;
+}
+.magicEightContainer{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
