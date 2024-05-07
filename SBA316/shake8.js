@@ -1,3 +1,8 @@
+let userName = prompt("Give me a name!");
+
+let nameGiven = document.createElement("div");
+nameGiven.setAttribute("class", "nameGiven");
+
 let userQuestion = document.querySelector(".userQuestion");
 
 let questionAsked = document.createElement("div");
@@ -10,17 +15,15 @@ const startGame = () => {
 
   questionAsked.innerHTML = userInput;
   userQuestion.append(questionAsked);
-
-  document.getElementById("startGame").addEventListener("click", handleClick);
-
-  function getRandomAnimation() {
-    let animations = ["slideInFromLeft", "fadeIn", "rotate"];
-    let randomIndex = Math.floor(Math.random() * animations.length);
-    return animations[randomIndex];
-  }
-
-  chooseAnswer();
 };
+document.getElementById("startGame").addEventListener("click", handleClick);
+
+function getRandomAnimation() {
+  let animations = ["slideInFromLeft", "fadeIn", "rotate"];
+  let randomIndex = Math.floor(Math.random() * animations.length);
+  return animations[randomIndex];
+  chooseAnswer();
+}
 
 const changeClassesDuring = () => {
   document.getElementById("firstImage").classList.remove("eightBall1");
