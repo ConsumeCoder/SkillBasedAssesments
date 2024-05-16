@@ -55,4 +55,6 @@ const startQuestion = document.getElementById("startQuestion");
 //I want to use the answer button to start the song and pass the value
 const answerButton = document.querySelector("button");
 
-answerButton.addEventListener('click', function)
+function 
+
+answerButton.addEventListener('click', function())
