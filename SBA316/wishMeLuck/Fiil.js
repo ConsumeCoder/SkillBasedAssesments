@@ -57,4 +57,38 @@ const answerButton = document.querySelector("button");
 
 function 
 
-answerButton.addEventListener('click', function())
+    answerButton.addEventListener('click', getLyrics ())
+
+    // script.js
+function getLyrics() {
+    const dayInput = startQuestion.textContent('dayInput').value.toLowerCase();
+    let lyrics = '';
+
+    switch (dayInput) {
+        case 'monday':
+            lyrics = "I don't care if Monday's blue...";
+            break;
+        case 'tuesday':
+            lyrics = "Tuesday's grey and Wednesday too...";
+            break;
+        case 'wednesday':
+            lyrics = "Thursday, I don't care about you...";
+            break;
+        case 'thursday':
+            lyrics = "It's Friday, I'm in love...";
+            break;
+        case 'friday':
+            lyrics = "Saturday, wait, and Sunday always comes too late...";
+            break;
+        case 'saturday':
+            lyrics = "Saturday, wait, and Sunday always comes too late...";
+            break;
+        case 'sunday':
+            lyrics = "Saturday, wait, and Sunday always comes too late...";
+            break;
+        default:
+            lyrics = " If not today, then when!";
+    }
+
+    document.getElementById('lyrics').textContent = lyrics;
+}
